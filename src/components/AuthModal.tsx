@@ -26,9 +26,7 @@ const AuthModal = ({ isOpen, onClose, onLogin }: AuthModalProps) => {
     email: '',
     studentId: '',
     password: '',
-    confirmPassword: '',
-    role: '',
-    hostel: ''
+    role: ''
   });
 
   const handleLogin = (e: React.FormEvent) => {
@@ -51,18 +49,13 @@ const AuthModal = ({ isOpen, onClose, onLogin }: AuthModalProps) => {
   const handleSignup = (e: React.FormEvent) => {
     e.preventDefault();
     // Mock signup - in real app this would connect to Supabase
-    if (signupForm.password !== signupForm.confirmPassword) {
-      alert('Passwords do not match!');
-      return;
-    }
-    
     const userData = {
       id: '2',
       name: signupForm.name,
       email: signupForm.email,
       studentId: signupForm.studentId,
       role: signupForm.role,
-      hostel: signupForm.hostel,
+      hostel: 'Phoenix Hall',
       points: 0,
       level: 'Eco Newbie',
       joinDate: new Date().toISOString().split('T')[0]
@@ -178,34 +171,18 @@ const AuthModal = ({ isOpen, onClose, onLogin }: AuthModalProps) => {
                       />
                     </div>
                   </div>
-                  <div className="grid grid-cols-2 gap-4">
-                    <div className="space-y-2">
-                      <Label htmlFor="signup-role">Role</Label>
-                      <Select value={signupForm.role} onValueChange={(value) => setSignupForm({...signupForm, role: value})}>
-                        <SelectTrigger>
-                          <SelectValue placeholder="Select role" />
-                        </SelectTrigger>
-                        <SelectContent>
-                          <SelectItem value="student">Student</SelectItem>
-                          <SelectItem value="staff">Staff</SelectItem>
-                          <SelectItem value="faculty">Faculty</SelectItem>
-                        </SelectContent>
-                      </Select>
-                    </div>
-                    <div className="space-y-2">
-                      <Label htmlFor="signup-hostel">Hostel/Building</Label>
-                      <Select value={signupForm.hostel} onValueChange={(value) => setSignupForm({...signupForm, hostel: value})}>
-                        <SelectTrigger>
-                          <SelectValue placeholder="Select hostel" />
-                        </SelectTrigger>
-                        <SelectContent>
-                          <SelectItem value="phoenix">Phoenix Hall</SelectItem>
-                          <SelectItem value="aurora">Aurora Wing</SelectItem>
-                          <SelectItem value="campus">Campus Residence</SelectItem>
-                          <SelectItem value="other">Other</SelectItem>
-                        </SelectContent>
-                      </Select>
-                    </div>
+                  <div className="space-y-2">
+                    <Label htmlFor="signup-role">Role</Label>
+                    <Select value={signupForm.role} onValueChange={(value) => setSignupForm({...signupForm, role: value})}>
+                      <SelectTrigger>
+                        <SelectValue placeholder="Select your role" />
+                      </SelectTrigger>
+                      <SelectContent>
+                        <SelectItem value="student">Student</SelectItem>
+                        <SelectItem value="staff">Staff</SelectItem>
+                        <SelectItem value="faculty">Faculty</SelectItem>
+                      </SelectContent>
+                    </Select>
                   </div>
                   <div className="space-y-2">
                     <Label htmlFor="signup-password">Password</Label>
@@ -215,17 +192,6 @@ const AuthModal = ({ isOpen, onClose, onLogin }: AuthModalProps) => {
                       placeholder="Create a password"
                       value={signupForm.password}
                       onChange={(e) => setSignupForm({...signupForm, password: e.target.value})}
-                      required
-                    />
-                  </div>
-                  <div className="space-y-2">
-                    <Label htmlFor="signup-confirm-password">Confirm Password</Label>
-                    <Input
-                      id="signup-confirm-password"
-                      type="password"
-                      placeholder="Confirm your password"
-                      value={signupForm.confirmPassword}
-                      onChange={(e) => setSignupForm({...signupForm, confirmPassword: e.target.value})}
                       required
                     />
                   </div>
