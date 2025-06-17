@@ -31,6 +31,7 @@ const AuthModal = ({ isOpen, onClose, onLogin }: AuthModalProps) => {
 
   const handleLogin = (e: React.FormEvent) => {
     e.preventDefault();
+    console.log('Login form submitted:', loginForm);
     // Mock login - in real app this would connect to Supabase
     const userData = {
       id: '1',
@@ -48,9 +49,17 @@ const AuthModal = ({ isOpen, onClose, onLogin }: AuthModalProps) => {
 
   const handleSignup = (e: React.FormEvent) => {
     e.preventDefault();
+    console.log('Signup form submitted:', signupForm);
+    
+    // Validate required fields
+    if (!signupForm.name || !signupForm.email || !signupForm.studentId || !signupForm.password || !signupForm.role) {
+      alert('Please fill in all fields');
+      return;
+    }
+    
     // Mock signup - in real app this would connect to Supabase
     const userData = {
-      id: '2',
+      id: Math.random().toString(36).substr(2, 9),
       name: signupForm.name,
       email: signupForm.email,
       studentId: signupForm.studentId,
@@ -173,7 +182,7 @@ const AuthModal = ({ isOpen, onClose, onLogin }: AuthModalProps) => {
                   </div>
                   <div className="space-y-2">
                     <Label htmlFor="signup-role">Role</Label>
-                    <Select value={signupForm.role} onValueChange={(value) => setSignupForm({...signupForm, role: value})}>
+                    <Select value={signupForm.role} onValueChange={(value) => setSignupForm({...signupForm, role: value})} required>
                       <SelectTrigger>
                         <SelectValue placeholder="Select your role" />
                       </SelectTrigger>
