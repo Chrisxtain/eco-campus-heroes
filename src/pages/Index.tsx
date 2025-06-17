@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -7,6 +6,7 @@ import { Recycle, Users, Calendar, Upload, MapPin, Settings, Sparkles, Leaf, Awa
 import Navigation from '@/components/Navigation';
 import AuthModal from '@/components/AuthModal';
 import DashboardView from '@/components/DashboardView';
+import Footer from '@/components/Footer';
 
 const Index = () => {
   const [isAuthModalOpen, setIsAuthModalOpen] = useState(false);
@@ -209,6 +209,8 @@ const Index = () => {
           </div>
         </div>
       </section>
+
+      <Footer />
 
       <AuthModal 
         isOpen={isAuthModalOpen} 
