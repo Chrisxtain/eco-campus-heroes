@@ -1,12 +1,13 @@
 
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Recycle, Mail, Phone, MapPin, Facebook, Twitter, Instagram, Linkedin } from 'lucide-react';
 
 const Footer = () => {
   return (
     <footer className="bg-gray-900 text-white">
-      <div className="container mx-auto px-6 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+      <div className="container mx-auto px-4 sm:px-6 py-12 sm:py-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
           {/* Brand Section */}
           <div className="space-y-4">
             <div className="flex items-center space-x-3">
@@ -31,24 +32,24 @@ const Footer = () => {
           {/* Quick Links */}
           <div>
             <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
-            <ul className="space-y-2">
-              <li><a href="/" className="text-gray-400 hover:text-emerald-400 transition-colors">Home</a></li>
-              <li><a href="/features" className="text-gray-400 hover:text-emerald-400 transition-colors">Features</a></li>
-              <li><a href="/how-it-works" className="text-gray-400 hover:text-emerald-400 transition-colors">How It Works</a></li>
-              <li><a href="/rewards" className="text-gray-400 hover:text-emerald-400 transition-colors">Rewards</a></li>
-              <li><a href="/blog" className="text-gray-400 hover:text-emerald-400 transition-colors">Blog</a></li>
+            <ul className="space-y-3">
+              <li><Link to="/" className="text-gray-400 hover:text-emerald-400 transition-colors text-sm sm:text-base">Home</Link></li>
+              <li><Link to="/features" className="text-gray-400 hover:text-emerald-400 transition-colors text-sm sm:text-base">Features</Link></li>
+              <li><Link to="/how-it-works" className="text-gray-400 hover:text-emerald-400 transition-colors text-sm sm:text-base">How It Works</Link></li>
+              <li><Link to="/rewards" className="text-gray-400 hover:text-emerald-400 transition-colors text-sm sm:text-base">Rewards</Link></li>
+              <li><Link to="/blog" className="text-gray-400 hover:text-emerald-400 transition-colors text-sm sm:text-base">Blog</Link></li>
             </ul>
           </div>
 
           {/* Support */}
           <div>
             <h3 className="text-lg font-semibold mb-4">Support</h3>
-            <ul className="space-y-2">
-              <li><a href="/contact" className="text-gray-400 hover:text-emerald-400 transition-colors">Contact Us</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-emerald-400 transition-colors">Help Center</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-emerald-400 transition-colors">Privacy Policy</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-emerald-400 transition-colors">Terms of Service</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-emerald-400 transition-colors">FAQ</a></li>
+            <ul className="space-y-3">
+              <li><Link to="/contact" className="text-gray-400 hover:text-emerald-400 transition-colors text-sm sm:text-base">Contact Us</Link></li>
+              <li><a href="#" className="text-gray-400 hover:text-emerald-400 transition-colors text-sm sm:text-base">Help Center</a></li>
+              <li><a href="#" className="text-gray-400 hover:text-emerald-400 transition-colors text-sm sm:text-base">Privacy Policy</a></li>
+              <li><a href="#" className="text-gray-400 hover:text-emerald-400 transition-colors text-sm sm:text-base">Terms of Service</a></li>
+              <li><a href="#" className="text-gray-400 hover:text-emerald-400 transition-colors text-sm sm:text-base">FAQ</a></li>
             </ul>
           </div>
 
