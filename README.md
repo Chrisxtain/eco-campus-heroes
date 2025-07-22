@@ -2,21 +2,18 @@
 
 ## Project info
 
-**URL**: https://lovable.dev/projects/78d242a6-6962-4fb6-897a-68b591b1063b
+**URL**: https://ecocampus.netlify.app/
+
+**About**
+A web application developed using React and Typescript to promote effective campus waste management in Nigerian universities. The app offers AI-powered waste classification, gamification rewards, offline support, real-time bin monitoring, and a dedicated admin dashboard — all while remaining lightweight and accessible to users of varying literacy levels.
 
 ## How can I edit this code?
 
 There are several ways of editing your application.
 
-**Use Lovable**
-
-Simply visit the [Lovable Project](https://lovable.dev/projects/78d242a6-6962-4fb6-897a-68b591b1063b) and start prompting.
-
-Changes made via Lovable will be committed automatically to this repo.
-
 **Use your preferred IDE**
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+If you want to work locally using your own IDE, you can clone this repo and push changes.
 
 The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
 
@@ -60,14 +57,36 @@ This project is built with:
 - shadcn-ui
 - Tailwind CSS
 
-## How can I deploy this project?
+## 🌟 Features
 
-Simply open [Lovable](https://lovable.dev/projects/78d242a6-6962-4fb6-897a-68b591b1063b) and click on Share -> Publish.
+### 1. 🧭 User Interface
+- 4-tab layout:
+  - **Home**: View bin status nearby.
+  - **Camera**: Scan and classify waste using AI.
+  - **Rewards**: Track and redeem points.
+  - **Profile**: View and manage user details.
+- Large, icon-based buttons designed for low-literacy users.
 
-## Can I connect a custom domain to my Lovable project?
+### 2. 🤖 AI-Based Waste Classification
+- Camera-based detection of **paper**, **plastic**, and **organic** materials.
+- Lightweight (<5MB) TensorFlow Lite model integration.
+- Real-time classification using device camera.
 
-Yes, you can!
+### 3. 🏆 Gamification & Rewards
+- Earn **10 points** for each correctly classified and disposed item.
+- Points redeemable for **campus coupons** via printable QR codes.
+- **Weekly department leaderboard** to encourage participation.
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+### 4. 🌐 Offline Support
+- Stores up to **50 offline transactions** for later synchronization.
+- Supports **USSD shortcode** `*123#` for basic functionality in no-internet zones.
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+### 5. 🗑 Bin Monitoring
+- Detects and displays the **3 nearest waste bins** with real-time fill levels:  
+  `Empty`, `Half-full`, `Full`.
+- Sends **notifications** when a bin reaches **80% capacity**.
+
+### 6. 👩‍💼 Admin Dashboard
+- Secure **Admin login**.
+- View daily waste statistics, department breakdowns.
+- Automatically generated PDF reports (Firebase integration).
