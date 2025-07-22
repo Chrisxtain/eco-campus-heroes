@@ -1,4 +1,4 @@
-# Welcome to your Lovable project
+# Welcome to my campus eco friendly waste management system
 
 ## Project info
 
