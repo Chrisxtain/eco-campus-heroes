@@ -5,6 +5,8 @@
 **URL**: https://ecocampus.netlify.app/
 
 **About**
+
+
 A web application developed using React and Typescript to promote effective campus waste management in Nigerian universities. The app offers AI-powered waste classification, gamification rewards, offline support, real-time bin monitoring, and a dedicated admin dashboard — all while remaining lightweight and accessible to users of varying literacy levels.
 
 ## How can I edit this code?
